@@ -3,6 +3,7 @@
 :root {
   --primary-color: #d9232d;
   --seconday-color: #556270;
+  --highlight-color: #f8f9fa;
 }
 
 * {
@@ -10,6 +11,19 @@
   margin: 0;
   font-family: "Raleway", sans-serif;
   letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+i {
+  color: #444444;
 }
 
 .container {
@@ -20,6 +34,35 @@
 .d-flex {
   display: flex;
 }
+
+section {
+  padding: 60px 0;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  padding: 10px 15px;
+}
+
+h3 {
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.sec-bg {
+  background-color: var(--highlight-color);
+}
+
+/* header */
 header {
   background-color: #fff;
   height: 80px;
@@ -28,6 +71,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  box-shadow: 0px 0px 10px #9f9f9f;
   z-index: 500;
 }
 .logo a {
@@ -73,6 +117,7 @@ header a {
   color: var(--seconday-color);
 }
 
+/* banner */
 .banner {
   height: 100vh;
   background: url("../images/banner.jpg");
@@ -82,6 +127,7 @@ header a {
   position: relative;
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .banner::after {
@@ -97,12 +143,13 @@ header a {
 }
 
 .banner .inner-text {
-  color: wheat;
   margin: 0 150px;
   margin-top: 80px;
   text-align: center;
 }
-
+.text-white {
+  color: #fff;
+}
 .banner .inner-text h2 {
   font-size: 3rem;
   margin-bottom: 1.8rem;
@@ -139,3 +186,78 @@ header a {
   margin: 5px;
   background-color: #fff;
 }
+
+/* contents */
+
+.col > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.col > ul {
+  line-height: 1.4rem;
+  margin: 10px 0px;
+}
+.col > ul > li {
+  display: flex;
+}
+.col > ul > li > i {
+  color: var(--primary-color);
+  --ggs: 1.2;
+  margin-right: 10px;
+}
+.italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.client .col {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.client img {
+  width: 60%;
+}
+
+/* box */
+
+.icon-box {
+  background: var(--highlight-color);
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-box:hover a {
+  color: var(--primary-color);
+}
+
+.icon-box i {
+  --ggs: 2;
+  color: var(--primary-color);
+}
+
+.box-content {
+  flex: 0.8;
+}
+
+.icon-box h4 {
+  margin-bottom: 15px;
+}
+.icon-box p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.icon-box h4 a {
+  color: #556270;
+  text-decoration: none;
+}
+
+/* portfolio / gallery */
